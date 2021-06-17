@@ -1,7 +1,8 @@
 #include <stdio.h>
 
 /**
-*main function - creates a char array and passes it to puts then returns 0
+*main - prints string string using puts
+*Return: 0
 */
 int main(void)
 {
