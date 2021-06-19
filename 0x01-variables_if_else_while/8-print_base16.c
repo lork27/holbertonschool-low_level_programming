@@ -5,14 +5,14 @@
 */
 int main(void)
 {
-
+char l;
 int i = 48;
 	while (i <= 57)
 	{
 		putchar(i);
 		i++;
 	}
-char l = 'a';
+l = 'a';
 	while (l <= 'f')
 	{
 		putchar(l);
