@@ -5,13 +5,14 @@
  *_islower - checks for lowercase character
  * Return: 0
  */
-int _islower(int x)
+int _islower(int c)
 {
-	if (islower(x) == 1)
+	if (islower(c) == 1)
 	{;
-	return (1);
+		return (1);
+	}
 	else
 	{
-	return (0);
-	+
+		return (0);
+	}
 }
