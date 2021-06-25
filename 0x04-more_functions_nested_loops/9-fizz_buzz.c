@@ -28,8 +28,7 @@ int main(void)
 		{
 			printf("%i ", i);
 		}
-		if (i == 100)
-			putchar(' ';
+		putchar(' ';
 	}
 	putchar('\n');
 	return (0);
