@@ -1,5 +1,9 @@
 #include "holberton.h"
-
+/**
+ *print_line - prints lines
+ *@n: the number you pass the func
+ *
+ */
 void print_line(int n)
 {
 	int i;
