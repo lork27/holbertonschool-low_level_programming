@@ -27,8 +27,8 @@ int main(void)
 		}
 		if (i == 100)
 			continue;
-		putchar(' ');
+		printf(" ");
 	}
-	putchar('\n');
+	printf("\n");
 	return (0);
 }
