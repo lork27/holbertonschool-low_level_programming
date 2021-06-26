@@ -25,6 +25,8 @@ int main(void)
 		{
 			printf("%i ", i);
 		}
+		if (i == 100)
+			continue;
 		putchar(' ');
 	}
 	putchar('\n');
