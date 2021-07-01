@@ -1,8 +1,9 @@
 #include "holberton.h"
 /**
  *_strcmp - function
- *@l1: first array
- *@l2: second array
+ *@s1: first array
+ *@s2: second array
+ *Return: the diff in number
  */
 
 int _strcmp(char *s1, char *s2)
@@ -24,13 +25,19 @@ int _strcmp(char *s1, char *s2)
 	{
 		if (s1[i] != s2[i])
 		{
-			return(s1[i] - s2[i]);
+			return (s1[i] - s2[i]);
 		}
 
-		if (s1[i] == s2[i])
+		if (l1 > l2)
 		{
-			return(i);
+			return (s1[l2]);
 		}
+		else if (l1 < l2)
+		{
+			return (s2[l1]);
+		}
+
+		return (0);
 
 	}
 
