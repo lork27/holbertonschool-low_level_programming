@@ -1,6 +1,6 @@
 #include "holberton.h"
 /**
- *leet - leetifies string
+ *rot13 - rot13 string
  *@str: the string argument it gets
  *Return: the string modified
  */
