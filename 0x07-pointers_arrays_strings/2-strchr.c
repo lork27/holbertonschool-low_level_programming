@@ -1,4 +1,5 @@
 #include "holberton.h"
+#include <stddef.h>
 /**
 *_strchr - funct that find a char in a string
 *@s: where we look for c
