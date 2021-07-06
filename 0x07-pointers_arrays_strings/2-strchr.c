@@ -1,6 +1,4 @@
 #include "holberton.h"
-#include <stddef.h>
-#include <stdio.h>
 /**
 *_strchr - funct that find a char in a string
 *@s: where we look for c
@@ -23,6 +21,6 @@ char *_strchr(char *s, char c)
 		s++;
 		i++;
 	}
-	return (NULL);
+	return (0);
 }
 
