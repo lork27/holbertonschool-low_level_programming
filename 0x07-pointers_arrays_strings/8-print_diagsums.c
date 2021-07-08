@@ -20,7 +20,7 @@ void print_diagsums(int *a, int size)
 		ct2 += a[j];
 	}
 
-	printf("%d, %d`\n", ct, ct2);
+	printf("%d, %d\n", ct, ct2);
 
 }
 
