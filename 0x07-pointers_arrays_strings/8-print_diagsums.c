@@ -4,29 +4,29 @@
 /**
  *print_diagsums - prints the sum of diagonals
  *@a: the int array
- *size: how much we sum
+ *@size: length of row
  */
 
 void print_diagsums(int *a, int size)
 {
-	int i, j;
-	int d1 = 0, d2 = 0;
+	int i;
+	int square = size * size;
+	int ct, ct2;
 
-	for (i = 0; i < size; i++)
+
+	for (i = 0; i < square; i += size + 1)
 	{
-		for (j = 0; j < size; j++)
-		{
-			if (i == j)
-			{
-			d1 += a[i];
-			}
-			if (i == size - j - 1)
-			{
-			d2 += a[j];
-			}
-		}
+		/*print sum of every point we parsed through*/
+		ct += a[i];
 	}
-	printf("%i", d1+ d2);
+
+	for (i = size - 1; i < square; i = i + size - 1)
+	{
+		/*print sum of every point we parsed through*/
+		ct2 += a[i];
+	}
+
+	printf("%i, %i \n", ct, ct2);
 
 }
 
