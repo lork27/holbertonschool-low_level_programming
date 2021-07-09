@@ -11,23 +11,18 @@ int main(int argc, char *argv[])
 {
 	int x, y, result;
 
-	if (argc < 3)
+	if (argc < 3 || argc > 3)
 	{
 		printf("error\n");
 		return (1);
 	}
-	else if (argc == 3)
+	else
 	{
 		x = atoi(argv[1]);
 		y = atoi(argv[2]);
 		result = x * y;
 		printf("%d\n", result);
 		return (0);
-	}
-	else
-	{
-		printf("error\n");
-		return (1);
 	}
 }
 
