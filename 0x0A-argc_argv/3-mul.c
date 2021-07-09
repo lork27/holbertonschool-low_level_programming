@@ -16,7 +16,7 @@ int main(int argc, char *argv[])
 		printf("error\n");
 		return (1);
 	}
-	else
+	else if (argc == 3)
 	{
 		x = atoi(argv[1]);
 		y = atoi(argv[2]);
@@ -24,5 +24,7 @@ int main(int argc, char *argv[])
 		printf("%d\n", result);
 		return (0);
 	}
+	else
+		return (1);
 }
 
