@@ -11,15 +11,20 @@ unsigned int _strlen(char *str);
 
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	void *r;
+	char *r;
+	unsigned int i;
 
 	if (nmemb == 0)
 		return (NULL);
 	if (size == 0)
 		return (NULL);
 
-	r = malloc((sizeof(char) * nmemb) * size);
+	r = malloc(nmemb * size);
 	if (r == NULL)
 		return (NULL);
+	for (i = 0; i < (nmemb * size); i++)
+		r[i] = 0;
+
+
 	return (r);
 }
