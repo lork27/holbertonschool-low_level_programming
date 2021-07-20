@@ -3,11 +3,8 @@
 #include "dog.h"
 
 /**
- *new_dog - initializes variable of type struct dog
- *@name: name of the new dog
- *@age: age of the dog
- *@owner: owner of the dog
- *@return: dog_t
+ *free_dog - free dog
+ *@d: struct to be freed
  */
 
 void free_dog(dog_t *d)
