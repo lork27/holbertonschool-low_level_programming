@@ -33,6 +33,7 @@ void print_all(const char * const format, ...)
 				break;
 			case 'f':
 				printf("%s%f", comma, va_arg(list, double));
+				comma = ", ";
 				break;
 			case 's':
 				c = va_arg(list, char *);
