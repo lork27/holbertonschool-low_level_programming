@@ -35,8 +35,7 @@ void print_all(const char * const format, ...)
 				c = va_arg(list, char *);
 				if (c == NULL)
 					c = "(nil)";
-				else
-					printf("%s%s", comma, c);
+				printf("%s%s", comma, c);
 				break;
 		}
 		comma = ", ";
