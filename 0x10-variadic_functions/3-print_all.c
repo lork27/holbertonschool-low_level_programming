@@ -1,4 +1,4 @@
-#include <stdlib.h>
+#include <stdio.h>
 #include <starg.h>
 /**
  *print_all - print all given argument a la printf
