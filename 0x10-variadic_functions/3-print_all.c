@@ -1,5 +1,4 @@
-#include <stdio.h>
-#include <starg.h>
+#include "variadic_functions.h"
 /**
  *print_all - print all given argument a la printf
  *@format: list of types of arguments passed to the function
@@ -25,9 +24,11 @@ void print_all(const char * const format, ...)
 		{
 			case 'c':
 				printf("%s%c", comma, va_arg(list, int));
+				comma = ", ";
 				break;
 			case 'i':
 				printf("%s%i", comma, va_arg(list, int));
+				comma = ", ";
 				break;
 			case 'f':
 				printf("%s%f", comma, va_arg(list, double));
@@ -37,9 +38,9 @@ void print_all(const char * const format, ...)
 				if (c == NULL)
 					c = "(nil)";
 				printf("%s%s", comma, c);
+				comma = ", ";
 				break;
 		}
-		comma = ", ";
 		i++;
 	}
 	va_end(list);
