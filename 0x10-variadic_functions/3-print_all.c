@@ -1,4 +1,5 @@
-#include "variadic_functions.h"
+#include <stdlib.h>
+#include <starg.h>
 /**
  *print_all - print all given argument a la printf
  *@format: list of types of arguments passed to the function
