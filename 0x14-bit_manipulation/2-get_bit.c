@@ -15,13 +15,11 @@ int get_bit(unsigned long int n, unsigned int index)
 	 */
 	unsigned int bin;
 
-	for ( ; index >= 1; index--)
+	for ( ; index > 0; index--)
 	{
 		bin = n >> index;
-
 		if (bin & 1)
 			return (1);
-		return (-1);
 	}
 	return (0);
 }
