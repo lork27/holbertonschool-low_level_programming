@@ -3,7 +3,7 @@
 /**
  *create_file - creates a file
  *@filename: name of the file to be created
- *@text_content: NULL terminated string to write to the file
+ *@text_content: NULL terminated string to write to the file1
  *Return: 1 success, -1 failure
  */
 
