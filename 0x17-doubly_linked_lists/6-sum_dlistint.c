@@ -14,10 +14,10 @@ int sum_dlistint(dlistint_t *head)
 	if (head == NULL)
 		return (0);
 	tmp = head;
-	while (temp != NULL)
+	while (tmp != NULL)
 	{
 		sum += tmp->n;
-		temp = temp->next;
+		tmp = tmp->next;
 	}
 	return (sum);
 }
