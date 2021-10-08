@@ -21,7 +21,8 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	if (new == NULL)
 		return (0);
 	new->key = (char *)key;
-	new->value = (char *)value;
+	new->value = strdup(value);
+	new->next = NULL;
 	idx = key_index((const unsigned char *)key, ht->size);
 	if (ht->array[idx] == NULL)
 	{
@@ -38,13 +39,6 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		tmp->next = new;
 		return (1);
 	}
-
-	/**
-	 *this function is not checking for collisions
-	 *check if the idx our hash funtion gives already has content
-	 *if it does use something like add_nodeat_n
-	 *to add node at said repeating index first empty node
-	 */
 
 	return (0);
 }
