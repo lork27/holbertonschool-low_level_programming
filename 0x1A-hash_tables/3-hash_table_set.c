@@ -13,7 +13,6 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	unsigned long int idx;
 	hash_node_t *new = NULL;
-	hash_node_t *tmp = NULL;
 
 	if (ht == NULL || key == NULL)
 		return (0);
@@ -23,19 +22,10 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	new->key = (char *)key;
 	new->value = (char *)value;
 	idx = key_index((const unsigned char *)key, ht->size);
-
 	if (ht->array[idx] == NULL)
-		ht->array[idx] = new;
-	else
 	{
-		tmp = ht->array[idx];
-		while (tmp->next != NULL)
-		{
-			tmp = tmp->next;
-		}
-		tmp->key = new->key;
-		tmp->value = new->value;
-		tmp = new;
+		ht->array[idx] = new;
+		return (1);
 	}
 
 	/**
@@ -45,5 +35,5 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	 *to add node at said repeating index first empty node
 	 */
 
-	return (1);
+	return (0);
 }
