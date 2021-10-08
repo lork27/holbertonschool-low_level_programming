@@ -25,7 +25,7 @@ void hash_table_print(const hash_table_t *ht)
 	for (idx = 0; idx < ht->size; idx++)
 	{
 		tmp = ht->array[idx];
-		if (ht->array[idx] != NULL)
+		while (tmp != NULL)
 		{
 			printf("%s'%s': '%s'", comma, tmp->key, tmp->value);
 			comma = ", ";
