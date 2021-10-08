@@ -14,9 +14,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	unsigned long int idx;
 	hash_node_t *new = NULL;
 
-	if (ht == NULL)
-		return (0);
-	if (key == NULL)
+	if (ht == NULL || key == NULL)
 		return (0);
 	new = malloc(sizeof(hash_node_t));
 	if (new == NULL)
@@ -26,5 +24,12 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	idx = key_index((const unsigned char *)key, ht->size);
 	ht->array[idx] = new;
 
-	return (0);
+	/**
+	 *this function is not checking for collisions
+	 *check if the idx our hash funtion gives already has content
+	 *if it does use something like add_nodeat_n
+	 *to add node at said repeating index first empty node
+	 */
+
+	return (1);
 }
