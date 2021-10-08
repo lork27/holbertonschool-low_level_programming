@@ -31,11 +31,12 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	else
 	{
 		tmp = ht->array[idx];
-			while(tmp->next != NULL)
+			while (tmp->next != NULL)
 			{
 				tmp = tmp->next;
 			}
 		tmp->next = new;
+		return (1);
 	}
 
 	/**
